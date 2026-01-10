@@ -1,0 +1,6 @@
+# Projede eski ai log path'lerini bulun ve ai_logs ile değiştirin:
+grep -R "aiChats\|aiAdvice\|users/.*/aiLogs\|users/.*/aiAdvice" -n src || true
+
+# Örnek düzeltme (bulduğunuz dosyada):
+# await addDoc(collection(db, "users", userId, "aiChats"), {...})
+# -> await addDoc(collection(db, "ai_logs"), {...})
